@@ -26,7 +26,6 @@ class BaseModel():
             storage.new(self)
 
     def __str__(self):
-        cls_name = self.__class__.__name
         '''Custom string rep of the base model instance'''
         return (f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}")
 
@@ -37,8 +36,8 @@ class BaseModel():
 
     def to_dict(self):
         ''' returns a dictionary'''
-        obj_dict = self.__dict__
-        obj_dict['__class__'] = self.__class__.__name__
+        obj_dict = self.__dict__.copy()
         obj_dict['created_at'] = self.created_at.isoformat()
         obj_dict['updated_at'] = self.updated_at.isoformat()
+        obj_dict['__class__'] = self.__class__.__name__
         return (obj_dict)

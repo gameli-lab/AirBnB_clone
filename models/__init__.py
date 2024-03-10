@@ -2,9 +2,9 @@
 '''
 This is the __init__ module
 '''
-from models.engine.file_storage import FileStorage
+from models.engine import file_storage
 
-storage = FileStorage()
+storage = file_storage.FileStorage()
 ''' creates a file storage instance '''
 
 storage.reload()
