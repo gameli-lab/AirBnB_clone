@@ -9,3 +9,17 @@ body {
 	font-size:14px
 	font-family:Circular, "Helvetica Nueu", Helvetica, Arial, sans-serif;
 }
+
+.container {
+	max-width:1000px;
+	margin:30px auto;
+	align-items: center:
+}
+
+button {
+	cursor: pointer;
+}
+
+button:hover {
+	opacity:0.9;
+}
